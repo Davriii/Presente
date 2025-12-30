@@ -307,6 +307,10 @@
                 <div class="counter-label">Segundos</div>
             </div>
         </div>
+        <div class="counter-box">
+            <div class="counter-number" id="daystotal">0</div>
+            <div class="counter-label">Dias totais</div>
+        </div>
 
         <div class="music-player">
             <div class="player-title">🎵 After Dark 🎵</div>
@@ -338,6 +342,7 @@
             const minutes = Math.floor(seconds / 60);
             const hours = Math.floor(minutes / 60);
             const days = Math.floor(hours / 24);
+            const daystotal = Math.floor(hours / 24);
             
             // Calcular anos e meses
             let years = now.getFullYear() - startDate.getFullYear();
@@ -359,7 +364,8 @@
             // Atualizar elementos
             document.getElementById('years').textContent = years;
             document.getElementById('months').textContent = months;
-            document.getElementById('days').textContent = days;
+            document.getElementById('days').textContent = days % 24;
+            document.getElementById('daystotal').textContent = daystotal;
             document.getElementById('hours').textContent = hours % 24;
             document.getElementById('minutes').textContent = minutes % 60;
             document.getElementById('seconds').textContent = seconds % 60;
@@ -418,7 +424,7 @@
                 <p>Você é a pessoa mais incrível do mundo!</p>
                 <p>Cada momento ao seu lado é um presente.</p>
                 <p>Que continuemos escrevendo nossa história juntos!</p>
-                <p style="font-size: 1.8em; margin-top: 20px;">💜 TE AMO INFINITO 💜</p>
+                <p style="font-size: 1.8rem; margin-top: 20px;">💜 TE AMO INFINITO 💜</p>
                 <p><img src="image.png" alt="uaaa" style="width: 40%; border-radius: 10%"></p>
                 <span class="heart">eu ↑↑↑</span>
                 <div><img src="hellokittyflor.jpg" style="width: 40%; border-radius: 10%"><img src="muamua.jpg" style="width: 40%; border-radius: 10%"></div>
@@ -468,7 +474,7 @@
             
             // Mudar cor de fundo suavemente
             document.body.style.transition = 'background 2s ease';
-            document.body.style.background = 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)';
+            document.body.style.background = '135deg, #667eea 0%, #764ba2 100%)';
         }
     </script>
 </body>
